@@ -8,3 +8,4 @@ blinker==1.8.1
 importlib-metadata==7.1.0
 gunicorn==23.0.0
 zipp==3.18.1
+numpy
