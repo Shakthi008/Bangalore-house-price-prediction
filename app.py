@@ -1,5 +1,4 @@
 from flask import Flask, request, jsonify, render_template
-import os
 import json
 import pickle
 import numpy as np
@@ -15,9 +14,8 @@ def load_saved_artifacts():
     global __locations
     global __model
 
-    base_path = os.path.dirname(__file__)
-    columns_path = os.path.join(base_path, "columns.json")
-    model_path = os.path.join(base_path, "banglore_home_prices_model.pickle")
+    columns_path = "columns.json"
+    model_path = "banglore_home_prices_model.pickle"
 
     with open(columns_path, "r") as f:
         __data_columns = json.load(f)["data_columns"]
